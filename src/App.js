@@ -1,25 +1,37 @@
-import logo from './logo.svg';
-import './App.css';
+import React, { useState } from "react";
+import Results from "./components/Results";
+import Worksheet from "./components/Worksheet";
+import {
+  dataRowsMr,
+  dataRowsSales,
+  dataRowsUSA,
+  dataRows,
+} from "./components/data";
+const App = () => {
+  const [data, setData] = useState([]);
 
-function App() {
+  function run() {
+    setData(dataRows);
+  }
+  function clearData() {
+    setData([]);
+  }
+  function changeData(option) {
+    if (option == "usa") {
+      setData(dataRowsUSA);
+    } else if (option == "sales") {
+      setData(dataRowsSales);
+    } else if (option == "male") {
+      setData(dataRowsMr);
+    }
+  }
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className="site-container">
+      <Worksheet clearData={clearData} changeData={changeData} run={run} />
+      <Results data={data} />
     </div>
   );
-}
+};
 
 export default App;
