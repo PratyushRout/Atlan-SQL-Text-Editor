@@ -4,4 +4,4 @@ The designing of this application is done using figma, the link to the figma fil
 
 This application is created using JavaScript's React.js framework.
 
-The load time report of the application can be found in the following link - https://drive.google.com/file/d/1aEKGyoUP494eZFrl85JtHLL-ZmLE1Oht/view?usp=sharing
+The load time check of this application is done by using Google PageSpeed Insights, and the following is the link to the report - https://drive.google.com/file/d/1aEKGyoUP494eZFrl85JtHLL-ZmLE1Oht/view?usp=sharing
